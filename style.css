@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --gradient: linear-gradient(
+    120deg,
+    rgb(255, 166, 0),
+    rgb(255, 81, 1),
+    purple,
+    blue,
+    rgb(0, 110, 255),
+    rgb(5, 29, 252),
+    rgb(146, 7, 123),
+    rgb(255, 81, 1),
+    rgb(255, 174, 0)
+  );
+  --background: rgb(12, 12, 12);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(12, 12, 12);
+  margin: 0px;
+  height: 100vh;
+  color: white;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  border-bottom: 2px solid rgb(32, 32, 32);
+  background-color: rgb(12, 12, 12);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav li {
+  color: white;
+  list-style-type: none;
+  padding-right: 20px;
+  margin-top: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5px;
+}
+
+.logo img {
+  height: 8vh;
+  width: 8vh;
+  margin: 1vh;
+  margin-top: 2vh;
+  border-radius: 50vh;
+}
+
+.slogan {
+  margin-top: 14vh;
+  margin-left: 10vh;
+  font-size: 3vh;
+}
+
+.slogan p {
+  color: rgb(206, 203, 203);
+}
+
+.slogan span {
+  background: var(--gradient);
+  background-size: 200%;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-transition 5s linear infinite;
+}
+
+@keyframes gradient-transition {
+  to {
+    background-position: 200%;
+  }
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14vh;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 2vh;
+}
+
+.dt1{
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.dt1 p {
+max-width: 70vh;
+padding: 1vh;
+background-color: var(--background);
+border: 2px solid rgb(32, 32, 32);
+border-radius: 1vh;
+z-index: 2;
+}
+
+.Contatos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 14vh;
+}
+
+.contatos{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.contatos li {
+  list-style-type: none;
+  margin-inline: 5vh;
+  font-size: 8vh;
+}
+
+footer {
+  border-top: 2px solid rgb(32, 32, 32);
+  margin-top: 10vh;
+  font-size: 1em;
+  color: rgb(206, 203, 203);
+}
+
+@media (max-width: 700px) {
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 0.9em;
+}
+
+details {
+  font-size: 0.5em;
+}
+
+.contatos li {
+  font-size: 2em;
+}
+
+.logo img {
+  height: 6vh;
+  width: 6vh;
+}
+
+p {
+  font-size: 0.75em;
+}
+
+.slogan {
+  margin-left: 5vh;
+}
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.5em;
+  }
+
+  .slogan{
+    margin-left: 3vh;
+  }
+}
